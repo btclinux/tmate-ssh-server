@@ -5,10 +5,6 @@ if [ "${USE_PROXY_PROTOCOL}" -eq "1" ]; then
   set -- -x "$@"
 fi
 
-if [ "${HAS_WEBSOCKET}" -eq "1" ]; then
-  set -- -w localhost "$@"
-fi
-
 if [ -n "${WEBSOCKET_HOSTNAME}" ]; then
   set -- -w "${WEBSOCKET_HOSTNAME}" "$@"
 fi
